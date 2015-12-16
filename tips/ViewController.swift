@@ -39,16 +39,22 @@ class ViewController: UIViewController {
         let billAmount = NSString(string: billField.text!).doubleValue
         let tip = billAmount * tipPercentage
         let total = billAmount + tip
-        tipLabel.text = "\(tip)"
-        totalLabel.text = "\(total)"
-        tipLabel.text = String(format: "%.2f", tip) //to 2 decimal places formatting
-        totalLabel.text = String(format: "%.2f", total)
+        tipLabel.text = String(tip) //gets the tip and puts it into the label
+        totalLabel.text = String(total)
+        tipLabel.text = String(format: "$%.2f", tip) //to 2 decimal places
+        totalLabel.text = String(format: "$%.2f", total)
+        
+        //animations
+        self.totalLabel.alpha = 0
+        UIView.animateWithDuration(0.8, animations: {
+        // This causes first view to fade in and second view to fade out
+        self.totalLabel.alpha = 1
+        })
     }
     
     override func viewDidAppear(animated: Bool) {
         tipControl.setTitle("\(Int(glbltip.tipAmount))%", forSegmentAtIndex: 3)
     }
-
 
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true) //gets the keyboard to go away when tapped

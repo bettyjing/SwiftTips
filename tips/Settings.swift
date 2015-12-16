@@ -5,6 +5,7 @@
 //  Created by Betty Jing on 12/11/15.
 //  Copyright © 2015 bettydabomb. All rights reserved.
 //
+//makes global so that it is accesssible
 
 import Foundation
 class Settings{

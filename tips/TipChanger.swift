@@ -11,14 +11,12 @@ import UIKit
 class TipChanger: UIViewController {
 
     @IBAction func Changer(sender: AnyObject) {
-        glbltip.tipAmount = Double(tipChange.text!)!
+        glbltip.tipAmount = Double(tipChange.text!)! 
     }
     @IBOutlet var tipChange: UITextField!
     override func viewDidLoad() {
         tipChange.becomeFirstResponder()
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor(red: 255.0/255.0,green: 232.0/255.0, blue: 253/255.0, alpha: 1.0)
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,14 +27,5 @@ class TipChanger: UIViewController {
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true) //gets the keyboard to go away when tapped
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
