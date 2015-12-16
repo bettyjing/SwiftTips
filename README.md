@@ -33,7 +33,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I had a LOT of challenges trying to change the 3rd segmented control button to make it modifiable. Apple's documentation confused me (because it didn't seem to work) so I was kinda left in the dark. However, thanks to the process of trial and error, I got through and now it works! :)
 
 ## License
 
